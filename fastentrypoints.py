@@ -63,6 +63,8 @@ def get_args(cls, dist, header=None):  # noqa: D205,D400
     if header is None:
         # pylint: disable=E1101
         header = cls.get_header()
+    elif header is None:
+        print("NOne")
     spec = str(dist.as_requirement())
     for type_ in 'console', 'gui':
         group = type_ + '_scripts'
